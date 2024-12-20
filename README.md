@@ -1,7 +1,6 @@
-# TreeFormer: Single-view Plant Skeleton Estimation via Tree-constrained Graph Generation (WACV2025)
+# PlantPose: Universal Plant Skeleton Estimation via Tree-constrained Graph Generation
 
 ## Xinpeng Liu<sup>1</sup>, Hiroaki Santo<sup>1</sup>, Yosuke Toda<sup>2,3</sup>, Fumio Okura<sup>1</sup><br> (<sup>1</sup> Osaka University, <sup>2</sup> Phytometrics, <sup>3</sup> Nagoya University)
-[![arXiv](https://img.shields.io/badge/arXiv-2411.16132-b31b1b.svg)](https://arxiv.org/abs/2411.16132) 
 
 ## Requirements
 * CUDA>=9.2
@@ -82,13 +81,4 @@ Once you have the config file and trained model, run following command to evalua
 python valid_smd_guyot_nx.py
 ```
 
-## 4. Citation
 
-```
-@inproceedings{liu2025treeformer,
-  title={{TreeFormer}: Single-view Plant Skeleton Estimation via Tree-constrained Graph Generation},
-  author={Liu, Xinpeng and Santo, Hiroaki and Toda, Yosuke and Okura, Fumio},
-  booktitle={Proceedings of IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
-  year={2025}
-}
-```
