@@ -94,7 +94,7 @@ Our photograph and graph annotation, included in the self-captured package.
 <details>
 <summary>Web-sourced plants</summary>
 
-A [source photograph](https://gardenerspath.com/wp-content/uploads/2022/03/How-to-Grow-Pomegranates-Feature.jpg) and our graph annotation. The download package contains URLs and labels only.
+A [source photograph](https://www.chrisbowers.co.uk/controlpanel/ckfinder/userfiles/images/plum%20tree%20blossom%281%29.jpg) and our graph annotation. The download package contains URLs and labels only.
 
 ![Web-sourced plants example](data_preparation/examples/web_sourced.png)
 
