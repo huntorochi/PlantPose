@@ -1,0 +1,4 @@
+# Preserve the exact evaluated source/config bytes used by strict resume hashes.
+# The recovered sources contain both LF and CRLF files.
+*.py -text
+*.json -text

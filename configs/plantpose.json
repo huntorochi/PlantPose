@@ -1,0 +1,77 @@
+{
+  "model": {
+    "object_queries": 256,
+    "dropout": 0.15
+  },
+  "evaluation": {
+    "mst_algorithm": "kruskal",
+    "node_box_size": 0.2,
+    "fixed_prediction_box": false,
+    "max_detections": 256,
+    "smd_points": 2000,
+    "smd_eps": 1e-07,
+    "smd_max_iter": 100,
+    "topo_image_size": 512
+  },
+  "training": {
+    "seed": 3407,
+    "batch_per_gpu": 8,
+    "epochs": 100,
+    "learning_rate": 0.0001,
+    "backbone_learning_rate": 3e-05,
+    "weight_decay": 0.0001,
+    "lr_drop": 100,
+    "lr_gamma": 0.1,
+    "clip_grad_norm": 20.0,
+    "edge_weight": 4.0,
+    "validation": "smd_batch_sum",
+    "validation_mst_algorithm": "kruskal",
+    "smd_points": 500,
+    "smd_eps": 1e-07,
+    "smd_max_iter": 100
+  },
+  "datasets": {
+    "root": {
+      "evaluation": {
+        "fixed_prediction_box": true,
+        "max_detections": 2000,
+        "smd_eps": 1e-05,
+        "smd_max_iter": 10
+      },
+      "training": {
+        "seed": 10,
+        "lr_drop": 150,
+        "mst_lr_drop": 100,
+        "edge_weight": 1.0
+      }
+    },
+    "guyot": {
+      "evaluation": {
+        "node_box_size": 0.3,
+        "fixed_prediction_box": true,
+        "max_detections": 2000
+      }
+    },
+    "synthetic": {
+      "training": {
+        "sampler_seed": 0,
+        "train_limit": 40000,
+        "validation_limit": 1000,
+        "validation_shuffle": true
+      }
+    },
+    "mix": {
+      "model": {
+        "object_queries": 768,
+        "dropout": 0.05
+      },
+      "evaluation": {
+        "mst_algorithm": "prim"
+      },
+      "training": {
+        "lr_gamma": 0.5,
+        "validation": "smd_batch_mean"
+      }
+    }
+  }
+}
